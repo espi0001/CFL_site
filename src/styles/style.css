@@ -32,7 +32,7 @@ body {
 
 main {
   max-width: 1400px;
-  padding-inline: 4rem;
+  padding-inline: 60px;
 }
 
 /* TEKST START*/
@@ -61,6 +61,7 @@ h4 {
 p {
   font-size: 1rem;
   color: var(--text-color);
+  line-height: 1.5;
 }
 p,
 a {
