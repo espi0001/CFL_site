@@ -1,0 +1,44 @@
+---
+const { variant } = Astro.props;
+---
+
+<a class={variant}><slot /></a>
+
+<style>
+  a {
+    font-size: 0.8rem;
+    padding: 12px 38px;
+    color: var(--text-color);
+    border-width: 0.8px;
+    border-style: solid;
+    text-decoration: none;
+    cursor: pointer;
+    transition: ease 0.5s;
+  }
+
+  .primary {
+    border-image: var(--gradient-color) 1;
+    background: var(--gradient-color);
+  }
+  .primary:hover {
+    background: var(--button-hover);
+  }
+
+  .secondary {
+    background-color: transparent;
+    border: none;
+  }
+
+  .secondary:hover {
+  }
+
+  .tertiary {
+    border-image: var(--gradient-color) 1;
+    background: var(--button-hover);
+  }
+
+  .tertiary:hover {
+    border-image: var(--gradient-color) 1;
+    background: var(--gradient-color);
+  }
+</style>
