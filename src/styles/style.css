@@ -1,7 +1,79 @@
 :root {
-  --scrollbar-vertical-size: 16px;
-  --scrollbar-horizontal-size: 16px;
+  --primary-font: "Open Sans", sans-serif;
+  --body-font: "Work Sans", sans-serif;
+
+  --body-color: #000000;
+  --text-color: #ffffff;
+  --action-color: #fd6d27;
+  --gadient-color: linear-gradient(to bottom, #7a4fc1, #c059bd);
 }
-html {
-  font-family: Arial, Helvetica, sans-serif;
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--body-color);
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--primary-font);
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+h3 {
+  font-size: 1.375rem;
+}
+h4 {
+  font-size: 1.3rem;
+}
+p {
+  font-size: 1rem;
+}
+p,
+a {
+  font-family: var(--body-font);
+}
+a:hover {
+  color: var(--action-color);
+}
+/* ___________________________ DESKTOP  ___________________________*/
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 3.25rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+  }
 }
