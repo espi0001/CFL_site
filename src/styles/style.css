@@ -1,0 +1,7 @@
+:root {
+  --scrollbar-vertical-size: 16px;
+  --scrollbar-horizontal-size: 16px;
+}
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
