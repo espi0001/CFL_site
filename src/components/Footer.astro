@@ -53,31 +53,30 @@
 
 <style>
   footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    padding-inline: 64px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-inline: 20px;
   }
   .logo_footer img {
     width: 80px;
     height: auto;
-    margin-bottom: 30px;
   }
-
   .content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
   .links {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 30px;
+    margin-bottom: 40px;
   }
   .kontakt,
   .sociale_medier {
     display: grid;
     gap: 10px;
   }
+
   .mail,
   .phone,
   .adress,
@@ -87,6 +86,7 @@
     display: flex;
     align-items: center;
   }
+
   .kontakt p,
   .sociale_medier p {
     font-weight: bold;
@@ -116,7 +116,7 @@
 
   .newsletter {
     display: grid;
-    justify-items: end;
+    justify-items: start;
   }
   .newsletter .terms p {
     font-size: 0.5rem;
@@ -139,5 +139,84 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
+  }
+
+  /* ___________________________ TABLET  ___________________________*/
+  /* reglerne gælder når skærmen er minimum 768px */
+  @media screen and (min-width: 768px) {
+    footer {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      padding-inline: 40px;
+    }
+
+    .content {
+      display: grid;
+      margin-bottom: 30px;
+    }
+    .links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .kontakt p,
+    .sociale_medier p {
+      font-weight: bold;
+    }
+
+    span {
+      margin-left: 10px;
+    }
+    .sociale_medier img {
+      width: 30px;
+      height: auto;
+    }
+
+    .newsletter {
+      display: grid;
+    }
+    .newsletter .terms p {
+      font-size: 0.5rem;
+    }
+    label {
+      font-size: 0.7rem;
+      color: var(--text-color);
+      font-family: var(--body-font);
+    }
+    .footer_line {
+      border-image: var(--gradient-color) 1;
+    }
+    .policy {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .footer_policy {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+  }
+
+  /* ___________________________ DESKTOP  ___________________________*/
+  @media screen and (min-width: 1024px) {
+    footer {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      padding-inline: 60px;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 30px;
+    }
+
+    .newsletter {
+      display: grid;
+      justify-items: end;
+    }
   }
 </style>
