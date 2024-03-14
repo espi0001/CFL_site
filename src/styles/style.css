@@ -1,3 +1,28 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ___________________________ knap ___________________________ */
+.link-button {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 3px 15px;
+  color: var(--font_sort);
+  border: 2px solid black;
+  text-decoration: none;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.link-button:hover {
+  border: 2px solid red;
+  background-color: var(--beige);
+  color: var(--font_sort);
+}
+
 :root {
   --primary-font: "Open Sans", sans-serif;
   --body-font: "Work Sans", sans-serif;
@@ -22,7 +47,7 @@ body {
   background-color: var(--body-color);
   list-style: none;
 }
-
+/* TEKST START*/
 h1,
 h2,
 h3,
@@ -55,6 +80,12 @@ a {
 a:hover {
   color: var(--action-color);
 }
+
+/* ___________________________ TABLET  ___________________________*/
+/* reglerne gælder når skærmen er minimum 768px */
+@media screen and (min-width: 768px) {
+}
+
 /* ___________________________ DESKTOP  ___________________________*/
 @media screen and (min-width: 1024px) {
   h1 {
