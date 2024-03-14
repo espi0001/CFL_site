@@ -5,24 +5,6 @@
   box-sizing: border-box;
 }
 
-/* ___________________________ knap ___________________________ */
-.link-button {
-  margin-top: 10px;
-  display: inline-block;
-  padding: 3px 15px;
-  color: var(--font_sort);
-  border: 2px solid black;
-  text-decoration: none;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.link-button:hover {
-  border: 2px solid red;
-  background-color: var(--beige);
-  color: var(--font_sort);
-}
-
 :root {
   --primary-font: "Open Sans", sans-serif;
   --body-font: "Work Sans", sans-serif;
@@ -31,6 +13,7 @@
   --text-color: #ffffff;
   --action-color: #fd6d27;
   --gradient-color: linear-gradient(to bottom, #7a4fc1, #c059bd);
+  --button-hover: transparent;
 }
 
 img {
@@ -60,6 +43,7 @@ h5 {
 
 h1 {
   font-size: 2rem;
+  margin-bottom: 24px;
 }
 h2 {
   font-size: 1.8rem;
@@ -107,4 +91,14 @@ a:hover {
   p {
     font-size: 1.125rem;
   }
+}
+
+/* FORSIDE CSS */
+
+.to_links {
+  display: flex;
+}
+
+i {
+  margin-left: 10px;
 }
