@@ -5,7 +5,7 @@
   --body-color: #000000;
   --text-color: #ffffff;
   --action-color: #fd6d27;
-  --gadient-color: linear-gradient(to bottom, #7a4fc1, #c059bd);
+  --gradient-color: linear-gradient(to bottom, #7a4fc1, #c059bd);
 }
 
 img {
