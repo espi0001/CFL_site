@@ -1,3 +1,157 @@
 ---
 
 ---
+
+<footer>
+  <div class="indholdet">
+    <a class="logo_footer" href="/">
+      <img src="/cfl-logo.png" alt="Logo" />
+    </a>
+    <div class="content">
+      <div class="links">
+        <div class="kontakt_gruppe">
+          <p>Contact</p>
+          <a class="mail" href="mailto:info@copenhagenlightfestival.org">Mail: <span> info@copenhagenlightfestival.org</span></a>
+          <a class="phone" href="tel:+4525556604">Phone: <span> +45 25 55 66 04</span></a>
+          <a class="adress" href="https://maps.app.goo.gl/gbwBRvixEDHALY1j7">Adress: <span> Toldbodgade 39, 1253 København K</span></a>
+        </div>
+
+        <div class="sociale_medier">
+          <p>Follow us</p>
+
+          <a class="facebook" href="https://www.facebook.com/cphlightfest/" target="_blank"> <img src="/public/Icon-facebook.svg" alt="Facebook icon" /> <span> Facebook</span></a>
+
+          <a class="instagram" href="https://www.instagram.com/cphlightfest/" target="_blank"> <img src="/public/Icon-instagram.svg" alt="Instagram icon" /> <span> Instagram</span></a>
+
+          <a class="youtube" href="https://www.youtube.com/@cphlightfest5395" target="_blank"> <img src="/public/Icon-youtube.svg" alt="Youtube icon" /> <span> Youtube</span></a>
+        </div>
+      </div>
+
+      <div class="newsletter">
+        <form action="action_page.php">
+          <div class="container">
+            <p>Stay up to date on the latest features and releases by joining our newsletter.</p>
+          </div>
+
+          <div class="container">
+            <input type="text" placeholder="Email address" name="mail" required />
+            <input type="submit" value="Subscribe" />
+          </div>
+
+          <label>
+            <input type="checkbox" checked="checked" name="subscribe" /> By clicking Subscribe you're confirming that you agree with our Terms and Conditions.
+          </label>
+        </form>
+      </div>
+    </div>
+    <div class="credits">
+      <hr class="footer_line" />
+      <div class="policy">
+        <p>© COPENHAGEN LIGHT FESTIVAL. All rights reserved.</p>
+        <div class="footer_policy">
+          <p>Privacy Policy</p>
+          <p>Terms of Service</p>
+          <p>Cookies Settings</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-inline: 64px;
+  }
+  .logo_footer img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  a {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    text-decoration: none;
+    list-style: none;
+  }
+
+  a:hover span {
+    color: var(--action-color);
+  }
+
+  span {
+    margin-left: 5px;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 30px;
+  }
+
+  .links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .kontakt_gruppe {
+    display: grid;
+  }
+
+  .sociale_medier img {
+    width: 30px;
+    height: auto;
+  }
+
+  .mail,
+  .phone,
+  .adress,
+  .facebook,
+  .instagram,
+  .youtube {
+    display: flex;
+    align-items: center;
+  }
+  .newsletter {
+    display: grid;
+    justify-items: end;
+  }
+  .newsletter p {
+    font-weight: normal;
+  }
+  .newsletter .terms p {
+    font-size: 0.5rem;
+  }
+
+  label {
+    font-size: 0.7rem;
+    color: var(--text-color);
+    font-family: var(--body-font);
+  }
+
+  .footer_line {
+    border-image: var(--gradient-color) 1;
+  }
+
+  .policy p {
+    font-weight: normal;
+  }
+  .policy {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .footer_policy {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+</style>
