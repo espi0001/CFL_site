@@ -32,7 +32,9 @@ import Links from "../components/Links.astro";
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 60px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-inline: 60px;
     background-color: var(--beige);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
@@ -97,7 +99,7 @@ import Links from "../components/Links.astro";
   /* Reglen gælder til og med 1024px */
   @media screen and (max-width: 1024px) {
     header {
-      padding: 40px;
+      padding-inline: 40px;
     }
   }
 
@@ -105,7 +107,7 @@ import Links from "../components/Links.astro";
   /* Reglen gælder til og med 768px */
   @media screen and (max-width: 768px) {
     header {
-      padding: 20px;
+      padding-inline: 20px;
     }
     .menu {
       display: none;
