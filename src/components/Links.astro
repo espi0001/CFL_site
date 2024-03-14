@@ -6,14 +6,19 @@ const { variant } = Astro.props;
 
 <style>
   a {
+    display: inline-block;
     font-size: 0.8rem;
-    padding: 12px 38px;
+    padding: 12px 36px;
     color: var(--text-color);
     border-width: 0.8px;
     border-style: solid;
     text-decoration: none;
     cursor: pointer;
-    transition: ease 0.5s;
+    transition: all 0.55s ease;
+  }
+
+  a:hover {
+    transform: scale(1.1);
   }
 
   .primary {
@@ -22,6 +27,7 @@ const { variant } = Astro.props;
   }
   .primary:hover {
     background: var(--button-hover);
+    box-shadow: 0 0 20px var(--gradient-color);
   }
 
   .secondary {
@@ -30,6 +36,7 @@ const { variant } = Astro.props;
   }
 
   .secondary:hover {
+    text-decoration: underline;
   }
 
   .tertiary {
