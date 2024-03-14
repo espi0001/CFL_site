@@ -16,7 +16,7 @@ import Links from "../components/Links.astro";
       <li><a href="/installations">Installations</a></li>
       <li><a href="/map">Map</a></li>
       <li><a href="/about">About</a></li>
-      <Links variant="tertiary" >Contact</Links>
+      <Links variant="tertiary">Contact</Links>
     </ul>
 
     <div class="burger">
@@ -93,10 +93,20 @@ import Links from "../components/Links.astro";
   .burger {
     display: none;
   }
+  /* __________________________ Tablet delen __________________________ */
+  /* Reglen gælder til og med 1024px */
+  @media screen and (max-width: 1024px) {
+    header {
+      padding: 40px;
+    }
+  }
 
   /* __________________________ Mobil delen __________________________ */
-  /* Reglen gælder til og med 800px */
-  @media screen and (max-width: 800px) {
+  /* Reglen gælder til og med 768px */
+  @media screen and (max-width: 768px) {
+    header {
+      padding: 20px;
+    }
     .menu {
       display: none;
     }

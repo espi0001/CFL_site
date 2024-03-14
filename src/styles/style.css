@@ -33,7 +33,7 @@ body {
 
 main {
   max-width: 1400px;
-  padding-inline: 60px;
+  padding-inline: 20px;
 }
 
 /* TEKST START*/
@@ -79,6 +79,9 @@ a:hover {
 /* ___________________________ TABLET  ___________________________*/
 /* reglerne gælder når skærmen er minimum 768px */
 @media screen and (min-width: 768px) {
+  main {
+    padding-inline: 40px;
+  }
   .events_grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -88,6 +91,9 @@ a:hover {
 
 /* ___________________________ DESKTOP  ___________________________*/
 @media screen and (min-width: 1024px) {
+  main {
+    padding-inline: 60px;
+  }
   h1 {
     font-size: 3.25rem;
   }
