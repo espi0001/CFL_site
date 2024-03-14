@@ -1,8 +1,15 @@
 ---
 import "../styles/style.css";
 import MainLayout from "../layouts/MainLayout.astro";
+import EventCard from "../components/EventCard.astro";
 ---
 
 <MainLayout title="Events">
-  <h2>her er events</h2>
+  <h1>Experience the Magic of Copenhagen Light Festival</h1>
+  <p>The Copenhagen Light Festival is an annual celebration of light art that illuminates the city during the darkest month of the year. Explore a diverse range of light-based works by established and emerging designers across various urban spaces.</p>
+  <section class="events_grid">
+    <EventCard eventNavn="AfterDAC: See light in the dark" eventDato="22.02.2023" />
+    <EventCard eventNavn="Heavenly light" eventDato="22.02.2023 + 23.02.2023" />
+    <EventCard eventNavn="Artist Talk med Tokyo Blue" eventDato="23.02.2023" />
+  </section>
 </MainLayout>

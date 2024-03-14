@@ -1,9 +1,29 @@
 ---
-const { eventNavn, eventDato } = Astro.props;
+const { event_card, eventNavn, eventDato } = Astro.props;
 ---
 
-<article>
-  <h3>{eventNavn}</h3>
-  <p>{eventDato}</p>
-  <button>Learn more</button>
+<!-- <article class={eventNavn + " " + eventDato}><slot /></article> -->
+<article class={event_card + eventNavn + eventDato}>
+  <slot />
+  <!-- <div class="event_billede"> -->
+  <!-- <h4>{eventNavn}</h4>
+    <p>{eventDato}</p>
+    <button>Learn more</button>
+  </div> -->
 </article>
+
+<style>
+  article {
+    border-color: var(--text-color);
+  }
+  .event_billede {
+    background-image: url(https://copenhagenlightfestival.org/wp-content/uploads/2024/02/dac.png);
+    filter: brightness(50%);
+  }
+  h4 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+</style>
