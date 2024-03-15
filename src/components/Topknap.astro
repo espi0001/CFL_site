@@ -2,30 +2,21 @@
 
 ---
 
-<a href="index.html">
-  <p class="arrow"></p>
-  <div class="knap">Back to top</div>
+<a href="#top">
+  <div class="knap"><p><span>←</span> Back to top</p></div>
 </a>
 
 <style>
   .knap {
     transform: rotate(90deg);
     position: fixed;
-    color: white;
+    color: var(--text-color);
     right: 0;
     display: inline;
     letter-spacing: 3px;
   }
 
-  .arrow {
-    border: solid rgb(255, 255, 255);
-    border-width: 0 3px 3px 0;
-    display: inline;
-    padding: 3px;
-    transform: rotate(-135deg);
-    right: 0;
-    position: fixed;
-    margin-right: 43px;
-    margin-top: -60px;
+  .knap p:hover {
+    color: var(--action-color);
   }
 </style>

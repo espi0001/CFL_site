@@ -1,6 +1,7 @@
 ---
 import "../styles/style.css";
 import MainLayout from "../layouts/MainLayout.astro";
+import GetInTouchCart from "../components/GetInTouchCart.astro";
 
 const data = await fetch("https://sgtjiqlznfkfxjrnmbzs.supabase.co", {
   method: "GET",
@@ -15,4 +16,6 @@ console.log(data);
 <MainLayout>
   <h1>Explore our Installations</h1>
   <p>Discover the captivating light installations and immerse yourself in the magic of Copenhagen Light Festival.</p>
+
+  <GetInTouchCart />
 </MainLayout>
