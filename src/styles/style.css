@@ -13,6 +13,7 @@
   --text-color: #ffffff;
   --action-color: #fd6d27;
   --gradient-color: linear-gradient(to bottom, #7a4fc1, #c059bd);
+  --button-hover: transparent;
 }
 
 img {
@@ -32,7 +33,7 @@ body {
 
 main {
   max-width: 1400px;
-  padding-inline: 4rem;
+  padding-inline: 20px;
 }
 
 /* TEKST START*/
@@ -48,6 +49,7 @@ h5 {
 
 h1 {
   font-size: 2rem;
+  margin-bottom: 44px;
 }
 h2 {
   font-size: 1.8rem;
@@ -61,6 +63,7 @@ h4 {
 p {
   font-size: 1rem;
   color: var(--text-color);
+  line-height: 1.5;
 }
 p,
 a {
@@ -73,9 +76,17 @@ a:hover {
   color: var(--action-color);
 }
 
+.tagline {
+  font-size: 0.8rem;
+  color: #666666;
+}
+
 /* ___________________________ TABLET  ___________________________*/
 /* reglerne gælder når skærmen er minimum 768px */
 @media screen and (min-width: 768px) {
+  main {
+    padding-inline: 40px;
+  }
   .events_grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -85,6 +96,9 @@ a:hover {
 
 /* ___________________________ DESKTOP  ___________________________*/
 @media screen and (min-width: 1024px) {
+  main {
+    padding-inline: 60px;
+  }
   h1 {
     font-size: 3.25rem;
   }
@@ -104,4 +118,20 @@ a:hover {
   p {
     font-size: 1.125rem;
   }
+}
+
+/* FORSIDE CSS */
+
+.light {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--action-color);
+}
+
+.to_links {
+  display: flex;
+}
+
+i {
+  margin-left: 10px;
 }

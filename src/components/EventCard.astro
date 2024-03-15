@@ -1,9 +1,9 @@
 ---
-const { event_card, eventNavn, eventDato } = Astro.props;
+const { eventCardNr, eventNavn, eventDato } = Astro.props;
 ---
 
 <!-- <article class={eventNavn + " " + eventDato}><slot /></article> -->
-<article class={event_card + eventNavn + eventDato}>
+<article class={eventCardNr + eventNavn + eventDato}>
   <slot />
   <!-- <div class="event_billede"> -->
   <!-- <h4>{eventNavn}</h4>
@@ -16,7 +16,7 @@ const { event_card, eventNavn, eventDato } = Astro.props;
   article {
     border-color: var(--text-color);
   }
-  .event_billede {
+  .nr1 {
     background-image: url(https://copenhagenlightfestival.org/wp-content/uploads/2024/02/dac.png);
     filter: brightness(50%);
   }
