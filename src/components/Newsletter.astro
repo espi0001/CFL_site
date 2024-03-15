@@ -1,112 +1,53 @@
 ---
 // const { variant } = Astro.props;
+import Links from "../components/Links.astro";
 ---
 
 <!-- <a class={variant}><slot /></a> -->
 <div class="newsletter">
-  <form action="action_page.php">
-    <!-- <div class="info">
+  <form name="newsletter" method="get" data-netlify="true">
+    <div class="info">
       <p>Stay up to date on the latest features and releases by joining our newsletter.</p>
-    </div> -->
-    <div class="container">
-      <input class="subscribe_text" type="text" placeholder="Email address" name="mail" required />
-
-      <input class="subscribe_knap" type="submit" value="Subscribe" />
     </div>
-    <label class="subscribe_terms">
-      <input class="checkbox" type="checkbox" checked="checked" name="subscribe" /> By clicking Subscribe you're confirming that you agree with our Terms and Conditions.
-    </label>
+    <div class="container">
+      <label for="email"><input class="subscribe_text" type="email" placeholder="Email" name="email" id="email" required /> </label>
+
+      <Links variant="primary" class="subscribe_knap" type="submit">Subscribe</Links>
+    </div>
+    <label for="terms" class="terms"><input class="terms" type="checkbox" name="termscond" id="terms" />I agree to the Terms </label>
   </form>
 </div>
 
 <style>
-  .checkbox {
-    cursor: pointer;
+  .newsletter {
+    display: grid;
+    justify-items: start;
+    max-width: 500px;
+  }
+  .info p {
+    font-size: 1.1rem;
   }
   .container {
     display: flex;
     margin: 16px 0;
     gap: 16px;
   }
-  .subscribe_terms {
-    font-size: 0.53rem;
-    color: var(--text-color);
-    font-family: var(--body-font);
-    align-items: center;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
   .subscribe_text {
     font-size: 0.8rem;
-    padding: 12px 36px;
+    padding: 12px 23px 12px 6px;
+    width: 320px;
   }
-
   .subscribe_knap {
-    display: inline-block;
     font-size: 0.8rem;
-    padding: 12px 36px;
-    color: var(--text-color);
-    border-width: 0.8px;
-    border-style: solid;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.55s ease;
-    font-family: var(--body-font);
+    width: 100%;
   }
 
-  .subscribe_knap {
-    border-image: var(--gradient-color) 1;
-    background: var(--gradient-color);
-  }
-  .subscribe_knap:hover {
-    background: var(--button-hover);
-    box-shadow: 0 0 20px var(--gradient-color);
-    transition: all 0.55s ease;
-  }
-
-  .secondary {
-    background-color: transparent;
-    border: none;
-  }
-
-  .secondary:hover {
-    text-decoration: underline;
-  }
-
-  .tertiary {
-    border-image: var(--gradient-color) 1;
-    background: var(--button-hover);
-  }
-
-  .tertiary:hover {
-    border-image: var(--gradient-color) 1;
-    background: var(--gradient-color);
-  }
-  .newsletter {
-    display: grid;
-    justify-items: start;
-  }
-  .newsletter .terms p {
-    font-size: 0.5rem;
-  }
-  label {
+  .terms {
+    display: flex;
+    gap: 1rem;
     font-size: 0.7rem;
+    cursor: pointer;
     color: var(--text-color);
     font-family: var(--body-font);
-  }
-  .footer_line {
-    border-image: var(--gradient-color) 1;
-  }
-  .policy {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  .footer_policy {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
   }
 </style>
