@@ -103,7 +103,7 @@ section {
 
 .discover_flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 100px;
 }
 
@@ -174,7 +174,7 @@ section {
 
 .light {
   color: transparent;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 1.2px;
   -webkit-text-stroke-color: var(--action-color);
 }
 
