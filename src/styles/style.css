@@ -14,12 +14,15 @@
   --action-color: #fd6d27;
   --gradient-color: linear-gradient(to bottom, #7a4fc1, #c059bd);
   --button-hover: transparent;
+  --timer-box-color: #fd6d2775;
 }
 
-img {
+img,
+video {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
 }
 html,
 body {
@@ -32,8 +35,9 @@ body {
 }
 
 main {
-  max-width: 1400px;
+  max-width: 1600px;
   padding-inline: 20px;
+  margin-inline: auto;
 }
 
 /* TEKST START*/
@@ -53,6 +57,7 @@ h1 {
 }
 h2 {
   font-size: 1.8rem;
+  margin-bottom: 34px;
 }
 h3 {
   font-size: 1.375rem;
@@ -60,13 +65,17 @@ h3 {
 h4 {
   font-size: 1.3rem;
 }
-p {
+p,
+ul {
   font-size: 1rem;
   color: var(--text-color);
   line-height: 1.5;
+  max-width: 80ch;
+  list-style: none;
 }
 p,
-a {
+a,
+ul {
   font-family: var(--body-font);
 }
 a {
@@ -79,6 +88,44 @@ a:hover {
 .tagline {
   font-size: 0.8rem;
   color: #666666;
+  margin-bottom: 15px;
+}
+
+.hr_styling {
+  border: 0.1px solid grey;
+  width: 120px;
+  margin-bottom: 40px;
+}
+
+section {
+  margin-bottom: 250px;
+}
+
+.discover_flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.fifty {
+  width: 50%;
+}
+
+.cph_image {
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 60%);
+}
+
+.index-highlights {
+  display: flex;
+  justify-content: center;
+}
+
+.center_text {
+  text-align: center;
+}
+
+#center_hr {
+  margin-inline: auto;
 }
 
 /* ___________________________ TABLET  ___________________________*/
@@ -100,7 +147,7 @@ a:hover {
     padding-inline: 60px;
   }
   h1 {
-    font-size: 3.25rem;
+    font-size: 4rem;
   }
   h2 {
     font-size: 2.5rem;
@@ -118,6 +165,9 @@ a:hover {
   p {
     font-size: 1.125rem;
   }
+
+  .cph_image {
+  }
 }
 
 /* FORSIDE CSS */
@@ -134,4 +184,11 @@ a:hover {
 
 i {
   margin-left: 10px;
+}
+
+.index-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
