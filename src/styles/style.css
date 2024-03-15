@@ -64,6 +64,8 @@ p {
   font-size: 1rem;
   color: var(--text-color);
   line-height: 1.5;
+  max-width: 65ch;
+  text-wrap: balance;
 }
 p,
 a {

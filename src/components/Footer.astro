@@ -1,5 +1,5 @@
 ---
-
+import Newsletter from "./Newsletter.astro";
 ---
 
 <footer>
@@ -22,8 +22,9 @@
         <a class="youtube" href="https://www.youtube.com/@cphlightfest5395" target="_blank"> <img src="/Icon-youtube.svg" alt="Youtube icon" /> <span> Youtube</span></a>
       </div>
     </div>
-
     <div class="newsletter">
+      <Newsletter />
+      <!-- <div class="newsletter">
       <form action="action_page.php">
         <div class="info">
           <p>Stay up to date on the latest features and releases by joining our newsletter.</p>
@@ -36,137 +37,78 @@
           <input type="checkbox" checked="checked" name="subscribe" /> By clicking Subscribe you're confirming that you agree with our Terms and Conditions.
         </label>
       </form>
+    </div> -->
     </div>
-  </div>
-  <div class="credits">
-    <hr class="footer_line" />
-    <div class="policy">
-      <p>© COPENHAGEN LIGHT FESTIVAL. All rights reserved.</p>
-      <div class="footer_policy">
-        <p>Privacy Policy</p>
-        <p>Terms of Service</p>
-        <p>Cookies Settings</p>
+    <div class="credits">
+      <hr class="footer_line" />
+      <div class="policy">
+        <p>© COPENHAGEN LIGHT FESTIVAL. All rights reserved.</p>
+        <div class="footer_policy">
+          <p>Privacy Policy</p>
+          <p>Terms of Service</p>
+          <p>Cookies Settings</p>
+        </div>
       </div>
     </div>
   </div>
-</footer>
 
-<style>
-  footer {
-    padding-top: 48px;
-    padding-bottom: 48px;
-    padding-inline: 20px;
-  }
-  .logo_footer img {
-    width: 80px;
-    height: auto;
-  }
-  .content {
-    display: grid;
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-  .links {
-    display: grid;
-    gap: 30px;
-    margin-bottom: 40px;
-  }
-  .kontakt,
-  .sociale_medier {
-    display: grid;
-    gap: 10px;
-  }
-
-  .mail,
-  .phone,
-  .adress,
-  .facebook,
-  .instagram,
-  .youtube {
-    display: flex;
-    align-items: center;
-  }
-
-  .kontakt p,
-  .sociale_medier p {
-    font-weight: bold;
-  }
-  h5 {
-    font-size: 1rem;
-  }
-
-  p,
-  a {
-    color: var(--text-color);
-    line-height: 1.5;
-    font-size: 0.85rem;
-    text-decoration: none;
-    list-style: none;
-  }
-  a:hover span {
-    color: var(--action-color);
-  }
-  span {
-    margin-left: 5px;
-  }
-  .sociale_medier img {
-    width: 30px;
-    height: auto;
-  }
-
-  .newsletter {
-    display: grid;
-    justify-items: start;
-  }
-  .newsletter .terms p {
-    font-size: 0.5rem;
-  }
-  label {
-    font-size: 0.7rem;
-    color: var(--text-color);
-    font-family: var(--body-font);
-  }
-  .footer_line {
-    border-image: var(--gradient-color) 1;
-  }
-  .policy {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  .footer_policy {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-  }
-
-  /* ___________________________ TABLET  ___________________________*/
-  /* reglerne gælder når skærmen er minimum 768px */
-  @media screen and (min-width: 768px) {
+  <style>
     footer {
-      padding-top: 40px;
-      padding-bottom: 40px;
-      padding-inline: 40px;
+      padding-top: 48px;
+      padding-bottom: 48px;
+      padding-inline: 20px;
     }
-
+    .logo_footer img {
+      width: 80px;
+      height: auto;
+    }
     .content {
       display: grid;
-      margin-bottom: 30px;
+      margin-top: 40px;
+      margin-bottom: 40px;
     }
     .links {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    .kontakt,
+    .sociale_medier {
+      display: grid;
+      gap: 10px;
+    }
+
+    .mail,
+    .phone,
+    .adress,
+    .facebook,
+    .instagram,
+    .youtube {
+      display: flex;
+      align-items: center;
     }
 
     .kontakt p,
     .sociale_medier p {
       font-weight: bold;
     }
+    h5 {
+      font-size: 1rem;
+    }
 
+    p,
+    a {
+      color: var(--text-color);
+      line-height: 1.5;
+      font-size: 0.85rem;
+      text-decoration: none;
+      list-style: none;
+    }
+    a:hover span {
+      color: var(--action-color);
+    }
     span {
-      margin-left: 10px;
+      margin-left: 5px;
     }
     .sociale_medier img {
       width: 30px;
@@ -175,6 +117,7 @@
 
     .newsletter {
       display: grid;
+      justify-items: start;
     }
     .newsletter .terms p {
       font-size: 0.5rem;
@@ -198,25 +141,84 @@
       justify-content: space-between;
       gap: 10px;
     }
-  }
 
-  /* ___________________________ DESKTOP  ___________________________*/
-  @media screen and (min-width: 1024px) {
-    footer {
-      padding-top: 60px;
-      padding-bottom: 60px;
-      padding-inline: 60px;
+    /* ___________________________ TABLET  ___________________________*/
+    /* reglerne gælder når skærmen er minimum 768px */
+    @media screen and (min-width: 768px) {
+      footer {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-inline: 40px;
+      }
+
+      .content {
+        display: grid;
+        margin-bottom: 30px;
+      }
+      .links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .kontakt p,
+      .sociale_medier p {
+        font-weight: bold;
+      }
+
+      span {
+        margin-left: 10px;
+      }
+      .sociale_medier img {
+        width: 30px;
+        height: auto;
+      }
+
+      .newsletter {
+        display: grid;
+      }
+      .newsletter .terms p {
+        font-size: 0.5rem;
+      }
+      label {
+        font-size: 0.7rem;
+        color: var(--text-color);
+        font-family: var(--body-font);
+      }
+      .footer_line {
+        border-image: var(--gradient-color) 1;
+      }
+      .policy {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .footer_policy {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
     }
 
-    .content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      margin-bottom: 30px;
-    }
+    /* ___________________________ DESKTOP  ___________________________*/
+    @media screen and (min-width: 1024px) {
+      footer {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-inline: 60px;
+      }
 
-    .newsletter {
-      display: grid;
-      justify-items: end;
+      .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 30px;
+      }
+
+      .newsletter {
+        display: grid;
+        justify-items: end;
+      }
     }
-  }
-</style>
+  </style>
+</footer>
