@@ -5,14 +5,59 @@ import Links from "../components/Links.astro";
 import Timer from "../components/Timer.astro";
 ---
 
+<!-- <div class="index-background">
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.55/build/spline-viewer.js"></script>
+  <spline-viewer url="https://prod.spline.design/YjqxmjkomxCqHi6g/scene.splinecode"></spline-viewer>
+</div> -->
 <MainLayout>
-  <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.55/build/spline-viewer.js"></script>
-<spline-viewer url="https://prod.spline.design/YjqxmjkomxCqHi6g/scene.splinecode"></spline-viewer> -->
-  <p class="tagline">Discover the Magic</p>
-  <h1>Copenhagen <br /> <span class="light">Light</span> Festival</h1>
-  <div class="to_links">
-    <Links variant="primary">Explore</Links>
-    <Links variant="secondary">Contact <i class="fa-solid fa-chevron-right fa-0.5x" style="color: #ffffff;"></i></Links>
-  </div>
-  <Timer />
+  <section>
+    <p class="tagline">Discover the Magic</p>
+    <h1>Copenhagen <br /> <span class="light">Light</span> Festival</h1>
+    <div class="to_links">
+      <Links variant="primary">Explore</Links>
+      <Links variant="secondary">Contact <i class="fa-solid fa-chevron-right fa-0.5x" style="color: #ffffff;"></i></Links>
+    </div>
+    <Timer />
+  </section>
+
+  <section class="discover_flex">
+    <div class="50">
+      <hr class="hr_styling" />
+      <p class="tagline">Immerse yourself in a captivating display of light-based works by renowned <br />designers.</p>
+      <h2>Discover the Mesmerizing <br />World of <span class="light">Light Art</span></h2>
+      <ul>
+        <li>Immerse in luminous wonders at Copenhagen Light Festival.</li>
+        <li>Join international and local audiences in celebrating the magic of light.</li>
+        <li>Explore Copenhagen's radiance at the Light Festival.</li>
+      </ul>
+    </div>
+    <div class="fifty">
+      <div class="cph_image">
+        <img src="/cph_light_1.jpeg" alt="Lys over København" />
+      </div>
+    </div>
+  </section>
+  <section class="index-highlights">
+    <div class="center_text">
+      <hr id="center_hr" class="hr_styling" />
+      <p class="tagline">Highlights</p>
+      <h2>Explore the <span class="light">Light</span> Program</h2>
+      <p>Discover stunning light art installations and events.</p>
+      <article></article>
+      <article></article>
+      <article></article>
+    </div>
+  </section>
+  <section class="discover_flex">
+    <div class="fifty">
+      <div>
+        <video src="public/Sequence 01_3.mp4"></video>
+      </div>
+    </div>
+    <div class="fifty">
+      <hr id="center_hr" class="hr_styling" />
+      <h2>Get Early Access Information Here</h2>
+      <p>Sign up to receive exclusive updates and VIP experiences.</p>
+    </div>
+  </section>
 </MainLayout>
