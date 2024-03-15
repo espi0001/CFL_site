@@ -65,11 +65,11 @@ p {
   color: var(--text-color);
   line-height: 1.5;
   max-width: 65ch;
-  text-wrap: balance;
 }
 p,
 a {
   font-family: var(--body-font);
+  font-weight: normal;
 }
 a {
   cursor: pointer;
