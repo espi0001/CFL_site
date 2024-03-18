@@ -28,18 +28,25 @@ import Links from "../components/Links.astro";
     font-size: 1.1rem;
   }
   .container {
-    display: flex;
+    display: grid;
     margin: 16px 0;
     gap: 16px;
   }
   .subscribe_text {
     font-size: 0.8rem;
     padding: 12px 23px 12px 6px;
-    width: 320px;
+    width: 460px;
+    max-width: 500px;
   }
-  .subscribe_knap {
+  .subscribe_knap a {
     font-size: 0.8rem;
     width: 100%;
+    text-align: center;
+  }
+  .subscribe_knap a {
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: center;
   }
 
   .terms {
@@ -49,5 +56,29 @@ import Links from "../components/Links.astro";
     cursor: pointer;
     color: var(--text-color);
     font-family: var(--body-font);
+  }
+
+  /* ___________________________ TABLET  ___________________________*/
+  /* reglerne gælder når skærmen er minimum 768px */
+  @media screen and (min-width: 768px) {
+    .container {
+      display: flex;
+      margin: 16px 0;
+      gap: 16px;
+    }
+    .subscribe_text {
+      font-size: 0.8rem;
+      padding: 12px 23px 12px 6px;
+      width: 320px;
+    }
+    .subscribe_knap a {
+      font-size: 0.8rem;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  /* ___________________________ DESKTOP  ___________________________*/
+  @media screen and (min-width: 1024px) {
   }
 </style>
