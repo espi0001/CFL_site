@@ -23,7 +23,7 @@ import Newsletter from "./Newsletter.astro";
       </div>
     </div>
     <div class="newsletter">
-      <Newsletter />
+      <Newsletter info_text="Stay up to date on the latest features and releases by joining our newsletter." />
     </div>
     <div class="credits">
       <hr class="footer_line" />
@@ -40,9 +40,7 @@ import Newsletter from "./Newsletter.astro";
 
   <style>
     footer {
-      padding-top: 48px;
-      padding-bottom: 48px;
-      padding-inline: 20px;
+      padding: 48px 20px 0 20px;
     }
     .logo_footer img {
       width: 80px;
@@ -139,9 +137,7 @@ import Newsletter from "./Newsletter.astro";
     /* reglerne gælder når skærmen er minimum 768px */
     @media screen and (min-width: 768px) {
       footer {
-        padding-top: 40px;
-        padding-bottom: 40px;
-        padding-inline: 40px;
+        padding: 40px 40px 0 40px;
       }
 
       .content {
@@ -200,9 +196,7 @@ import Newsletter from "./Newsletter.astro";
     /* ___________________________ DESKTOP  ___________________________*/
     @media screen and (min-width: 1024px) {
       footer {
-        padding-top: 60px;
-        padding-bottom: 60px;
-        padding-inline: 60px;
+        padding: 60px 60px 0 60px;
       }
 
       .content {

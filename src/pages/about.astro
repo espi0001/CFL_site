@@ -2,8 +2,20 @@
 import "../styles/style.css";
 import MainLayout from "../layouts/MainLayout.astro";
 import Topknap from "../components/Topknap.astro";
+import LokalMenu from "../components/LokalMenu.astro";
 ---
 
 <MainLayout>
-  <Topknap />
+  <div class="cards">
+    <LokalMenu navigation="/events" image="https://copenhagenlightfestival.org/wp-content/uploads/2024/02/74-Unorbit-1-scaled.jpg" tagline="Events" header="Explore our Events" text="Immerse yourself in the captivating world of light art." />
+    <LokalMenu navigation="/installations" image="https://copenhagenlightfestival.org/wp-content/uploads/2021/02/BIOLUMINESCENCE.jpg" tagline="Installations" header="Explore our Installations" text="Uncover the enchanting world of light art and its creators." />
+  </div>
 </MainLayout>
+
+<style>
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+</style>

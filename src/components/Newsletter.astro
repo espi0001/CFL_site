@@ -1,5 +1,6 @@
 ---
 // const { variant } = Astro.props;
+const { info_text } = Astro.props;
 import Links from "../components/Links.astro";
 ---
 
@@ -7,7 +8,9 @@ import Links from "../components/Links.astro";
 <div class="newsletter">
   <form name="newsletter" method="POST" data-netlify="true">
     <div class="info">
-      <p>Stay up to date on the latest features and releases by joining our newsletter.</p>
+      <p>
+        {info_text}
+      </p>
     </div>
     <div class="container">
       <label for="email"><input class="subscribe_text" type="email" placeholder="Email" name="email" id="email" required /> </label>
