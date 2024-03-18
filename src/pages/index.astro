@@ -4,15 +4,16 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Links from "../components/Links.astro";
 import Timer from "../components/Timer.astro";
 import Newsletter from "../components/Newsletter.astro";
+import LokalMenu from "../components/LokalMenu.astro";
 
-// const data = await fetch("https://sgtjiqlznfkfxjrnmbzs.supabase.co/rest/v1/CLF", {
-//   method: "GET",
-//   headers: {
-//     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNndGppcWx6bmZrZnhqcm5tYnpzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTI4MTAsImV4cCI6MjAyNjA2ODgxMH0.3y04NP60alzSSL8lAd_mTtqqmiD4RNkQS0K1ILA3KBk",
-//   },
-// }).then((res) => res.json());
+const data = await fetch("https://sgtjiqlznfkfxjrnmbzs.supabase.co/rest/v1/CLF", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNndGppcWx6bmZrZnhqcm5tYnpzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTI4MTAsImV4cCI6MjAyNjA2ODgxMH0.3y04NP60alzSSL8lAd_mTtqqmiD4RNkQS0K1ILA3KBk",
+  },
+}).then((res) => res.json());
 
-// console.log(data);
+console.log(data);
 ---
 
 <!-- <div class="index-background">
@@ -54,7 +55,7 @@ import Newsletter from "../components/Newsletter.astro";
       <p class="tagline">Highlights</p>
       <h2>Explore the <span class="light">Light</span> Program</h2>
       <p>Discover stunning light art installations and events.</p>
-      <article></article>
+      <LokalMenu />
       <article></article>
       <article></article>
     </div>
