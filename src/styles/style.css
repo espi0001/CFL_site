@@ -70,10 +70,7 @@ ul {
   font-size: 1rem;
   color: var(--text-color);
   line-height: 1.5;
-<<<<<<< HEAD
   max-width: 80ch;
-=======
->>>>>>> 8ef4f5aa15951f10019c43731a82cad4a608bc4a
 }
 p,
 a,
@@ -99,7 +96,6 @@ a:hover {
   width: 120px;
   margin-bottom: 40px;
 }
-
 
 /* ___________________________ TABLET  ___________________________*/
 /* reglerne gælder når skærmen er minimum 768px */
@@ -137,4 +133,3 @@ a:hover {
   .cph_image {
   }
 }
-

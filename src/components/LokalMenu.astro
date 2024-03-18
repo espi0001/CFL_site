@@ -1,17 +1,44 @@
 ---
-
+import Links from "./Links.astro";
+const { tagline } = Astro.props;
 ---
 
-<a href="#" class="overlay">
-  <article>
-    <img src="https://placehold.co/600x400" alt="" />
-    <div class="header">
-      <h4>overskrift i varierende længede</h4>
-    </div>
-    <div class="card_content">her er selve indholdet</div>
+<article>
+  <a href="/events">
+    <img src="https://copenhagenlightfestival.org/wp-content/uploads/2024/02/74-Unorbit-1-scaled.jpg" alt="Events billede" />
+  </a>
+  <p class="tagline">{tagline}</p>
 
-    <div class="card_bund">
-      <p>her er min card bund</p>
-    </div>
-  </article>
-</a>
+  <a href="/events">
+    <h4>Explore our Events</h4>
+  </a>
+
+  <p>Immerse yourself in the captivating world of light art.</p>
+
+  <div class="card_bund">
+    <a href="/events">
+      <Links variant="learn-more">Learn more <i class="fa-solid fa-chevron-right fa-0.5x" style="color: #ffffff;"></i></Links>
+    </a>
+  </div>
+
+  <style>
+    article img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+
+    .card_bund {
+      display: grid;
+      place-items: start;
+    }
+    .card_bund p {
+      margin-top: auto;
+      font-size: 1rem;
+    }
+
+    a.overlay:hover {
+      background-color: #00000073;
+    }
+  </style>
+</article>

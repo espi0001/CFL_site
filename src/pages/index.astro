@@ -48,16 +48,19 @@ console.log(data);
       </div>
     </div>
   </section>
-
-  <section class="index-highlights">
-    <div class="center_text">
-      <hr id="center_hr" class="hr_styling" />
-      <p class="tagline">Highlights</p>
-      <h2>Explore the <span class="light">Light</span> Program</h2>
-      <p>Discover stunning light art installations and events.</p>
-      <LokalMenu />
-      <article></article>
-      <article></article>
+  <section>
+    <article class="index-highlights">
+      <div class="center_text">
+        <hr id="center_hr" class="hr_styling" />
+        <p class="tagline">Highlights</p>
+        <h2>Explore the <span class="light">Light</span> Program</h2>
+        <p>Discover stunning light art installations and events.</p>
+      </div>
+    </article>
+    <div class="cards">
+      <LokalMenu tagline="Events" />
+      <LokalMenu tagline="Hej mor" />
+      <LokalMenu tagline="INstallationer" />
     </div>
   </section>
   <section class="discover_flex">
@@ -189,6 +192,12 @@ console.log(data);
     @media screen and (min-width: 1024px) {
       section {
         margin-bottom: 250px;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 32px;
+        margin-top: 50px;
       }
       .discover_flex {
         display: grid;

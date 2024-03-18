@@ -5,20 +5,39 @@ import Links from "../components/Links.astro";
 
 <!-- <a class={variant}><slot /></a> -->
 <div class="newsletter">
-  <form name="newsletter" method="get" data-netlify="true">
+  <form name="newsletter" method="POST" data-netlify="true">
     <div class="info">
       <p>Stay up to date on the latest features and releases by joining our newsletter.</p>
     </div>
     <div class="container">
       <label for="email"><input class="subscribe_text" type="email" placeholder="Email" name="email" id="email" required /> </label>
-
-      <Links variant="primary" class="subscribe_knap" type="submit">Subscribe</Links>
+      <button class="subscribe_knap" type="submit">Subscribe</button>
     </div>
     <label for="terms" class="terms"><input class="terms" type="checkbox" name="termscond" id="terms" />I agree to the Terms </label>
   </form>
 </div>
 
 <style>
+  button {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 12px 36px;
+    color: var(--text-color);
+    border-width: 0.8px;
+    border-style: solid;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.55s ease;
+    border-image: var(--gradient-color) 1;
+    background: var(--gradient-color);
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: var(--button-hover);
+    box-shadow: 0 0 20px var(--gradient-color);
+    cursor: pointer;
+  }
   .newsletter {
     display: grid;
     justify-items: start;
