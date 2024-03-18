@@ -3,29 +3,30 @@ import "../styles/style.css";
 import MainLayout from "../layouts/MainLayout.astro";
 import EventCard from "../components/EventCard.astro";
 
-// const data = await fetch("https://sgtjiqlznfkfxjrnmbzs.supabase.co/rest/v1/CLF", {
-//   method: "GET",
-//   headers: {
-//     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNndGppcWx6bmZrZnhqcm5tYnpzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTI4MTAsImV4cCI6MjAyNjA2ODgxMH0.3y04NP60alzSSL8lAd_mTtqqmiD4RNkQS0K1ILA3KBk",
-//   },
-// }).then((res) => res.json());
-
-// console.log(data);
+const data = await fetch("https://sgtjiqlznfkfxjrnmbzs.supabase.co/rest/v1/CLF%20-%20team%2019?Type=eq.Event", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNndGppcWx6bmZrZnhqcm5tYnpzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTI4MTAsImV4cCI6MjAyNjA2ODgxMH0.3y04NP60alzSSL8lAd_mTtqqmiD4RNkQS0K1ILA3KBk",
+  },
+}).then((res) => res.json());
 ---
 
 <MainLayout>
   <h1>Experience the Magic of Copenhagen Light Festival</h1>
   <p>The Copenhagen Light Festival is an annual celebration of light art that illuminates the city during the darkest month of the year. Explore a diverse range of light-based works by established and emerging designers across various urban spaces.</p>
-  <!-- <section class="events_grid">
-    <EventCard eventCardNr="nr1" eventNavn="Dac" eventDato="dato" />
-    <EventCard eventNavn="Heavenly light" eventDato="22.02.2023 + 23.02.2023" />
-    <EventCard eventNavn="Artist Talk med Tokyo Blue" eventDato="23.02.2023" />
-  </section> -->
-  <!-- <section class="events_grid">
+  <section class="events_grid">
     {
       data.map((event) => {
-        return <event data={event} />;
+        return <EventCard data={event} />;
       })
     }
-  </section> -->
+  </section>
 </MainLayout>
+
+<style>
+  .events_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+</style>
