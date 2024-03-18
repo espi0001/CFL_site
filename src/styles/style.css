@@ -80,6 +80,7 @@ ul {
 }
 a {
   cursor: pointer;
+  transition: all 0.55s ease;
 }
 a:hover {
   color: var(--action-color);
@@ -128,8 +129,5 @@ a:hover {
 
   p {
     font-size: 1.125rem;
-  }
-
-  .cph_image {
   }
 }
