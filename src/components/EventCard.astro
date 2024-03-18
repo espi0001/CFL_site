@@ -1,15 +1,16 @@
 ---
-const { eventCardNr, eventNavn, eventDato } = Astro.props;
+const { data } = Astro.props;
+
+console.log(data);
 ---
 
-<!-- <article class={eventNavn + " " + eventDato}><slot /></article> -->
-<article class={eventCardNr + eventNavn + eventDato}>
-  <slot />
-  <!-- <div class="event_billede"> -->
-  <!-- <h4>{eventNavn}</h4>
-    <p>{eventDato}</p>
+<article>
+  <div class="nr1">
+    <img src={data.image} alt={data.name} />
+    <h4>{data.name}</h4>
+    <p>{data.date}</p>
     <button>Learn more</button>
-  </div> -->
+  </div>
 </article>
 
 <style>
@@ -17,8 +18,20 @@ const { eventCardNr, eventNavn, eventDato } = Astro.props;
     border-color: var(--text-color);
   }
   .nr1 {
-    background-image: url(https://copenhagenlightfestival.org/wp-content/uploads/2024/02/dac.png);
+    position: relative;
+  }
+  .nr1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(${data.image});
     filter: brightness(50%);
+    z-index: -1;
+    background-repeat: no-repeat;
+    object-fit: contain;
   }
   h4 {
     text-align: center;
