@@ -12,11 +12,16 @@ import Links from "../components/Links.astro";
   <nav>
     <ul class="menu">
       <li><a href="/">Home</a></li>
+      <hr />
       <li><a href="/events">Events</a></li>
+      <hr />
       <li><a href="/installations">Installations</a></li>
+      <hr />
       <li><a href="/map">Map</a></li>
+      <hr />
       <li><a href="/about">About</a></li>
-      <Links variant="tertiary">Contact</Links>
+      <hr />
+      <li><Links variant="tertiary">Contact</Links></li>
     </ul>
 
     <div class="burger">
@@ -35,7 +40,7 @@ import Links from "../components/Links.astro";
     padding-top: 25px;
     padding-bottom: 25px;
     padding-inline: 60px;
-    background-color: var(--beige);
+    background-color: var(--body-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
@@ -78,7 +83,9 @@ import Links from "../components/Links.astro";
   .menu a:hover {
     color: var(--action-color);
   }
-
+  hr {
+    display: none;
+  }
   .burger {
     width: 30px;
     height: 20px;
@@ -108,12 +115,15 @@ import Links from "../components/Links.astro";
   @media screen and (max-width: 768px) {
     header {
       padding-inline: 20px;
+      text-align: start;
     }
     .menu {
       display: none;
+      text-align: start;
     }
     .burger {
       display: block;
+      text-align: start;
     }
     .burger.active .line:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px);
@@ -132,21 +142,27 @@ import Links from "../components/Links.astro";
 
     nav.active .menu {
       display: block;
-      background-color: var(--beige);
+      background-color: var(--body-color);
       position: absolute;
       top: 60px;
       left: 0;
       width: 100%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       z-index: 1;
+      text-align: start;
     }
 
     nav.active .menu li {
       margin: 10px 20px;
+      text-align: start;
     }
 
     nav.active .menu a {
       font-size: 1rem;
+      text-align: start;
+    }
+    hr {
+      display: block;
     }
     .logo img {
       width: 50px;
