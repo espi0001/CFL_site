@@ -1,6 +1,7 @@
 ---
 import "../styles/style.css";
 import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/Hero.astro";
 import InstallationCard from "../components/InstallationCard.astro";
 import GetInTouchCart from "../components/GetInTouchCart.astro";
 
@@ -13,10 +14,8 @@ const data = await fetch("https://sgtjiqlznfkfxjrnmbzs.supabase.co/rest/v1/CLF%2
 ---
 
 <MainLayout>
-  <section class="center-hero">
-    <h1>Explore our <span class="light">Installations</span></h1>
-    <p>Discover the captivating light installations and immerse yourself in the magic of Copenhagen Light Festival.</p>
-  </section>
+  <Hero header1="Explore our " header2=" Installations" underheader="Discover the captivating light installations and immerse yourself in the magic of Copenhagen Light Festival." />
+
   <section class="installations_grid">
     {
       data.map((installation) => {

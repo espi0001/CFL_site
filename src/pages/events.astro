@@ -1,6 +1,7 @@
 ---
 import "../styles/style.css";
 import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/Hero.astro";
 import EventCard from "../components/EventCard.astro";
 import LokalMenu from "../components/LokalMenu.astro";
 import LokalMenupt2 from "../components/LokalMenupt2.astro";
@@ -15,10 +16,7 @@ const data = await fetch("https://sgtjiqlznfkfxjrnmbzs.supabase.co/rest/v1/CLF%2
 ---
 
 <MainLayout>
-  <section class="center-hero">
-    <h1>Experience the Magic of <br />Copenhagen <span class="light">Light</span> Festival</h1>
-    <p>The Copenhagen Light Festival is an annual celebration of light art that illuminates the city during the darkest month of the year. Explore a diverse range of light-based works by established and emerging designers across various urban spaces.</p>
-  </section>
+  <Hero header1="Experience the Magic of Copenhagen " header2=" Festival" underheader1="Copenhagen Light Festival is an annual celebration of light art that illuminates the city during the darkest month of the year." underheader2="Explore a diverse range of light-based works by established and emerging designers across various urban spaces." />
 
   <section class="events_grid">
     {
@@ -48,18 +46,6 @@ const data = await fetch("https://sgtjiqlznfkfxjrnmbzs.supabase.co/rest/v1/CLF%2
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
-  }
-  .center-hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .light {
-    color: transparent;
-    -webkit-text-stroke-width: 1.2px;
-    -webkit-text-stroke-color: var(--action-color);
   }
 
   .index-highlights {
