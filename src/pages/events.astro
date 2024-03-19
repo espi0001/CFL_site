@@ -12,8 +12,11 @@ const data = await fetch("https://sgtjiqlznfkfxjrnmbzs.supabase.co/rest/v1/CLF%2
 ---
 
 <MainLayout>
-  <h1>Experience the Magic of Copenhagen Light Festival</h1>
-  <p>The Copenhagen Light Festival is an annual celebration of light art that illuminates the city during the darkest month of the year. Explore a diverse range of light-based works by established and emerging designers across various urban spaces.</p>
+  <section class="center-hero">
+    <h1>Experience the Magic of <br />Copenhagen <span class="light">Light</span> Festival</h1>
+    <p>The Copenhagen Light Festival is an annual celebration of light art that illuminates the city during the darkest month of the year. Explore a diverse range of light-based works by established and emerging designers across various urban spaces.</p>
+  </section>
+
   <section class="events_grid">
     {
       data.map((event) => {
@@ -25,8 +28,22 @@ const data = await fetch("https://sgtjiqlznfkfxjrnmbzs.supabase.co/rest/v1/CLF%2
 
 <style>
   .events_grid {
+    margin-top: 80px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
+  }
+
+  .center-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .light {
+    color: transparent;
+    -webkit-text-stroke-width: 1.2px;
+    -webkit-text-stroke-color: var(--action-color);
   }
 </style>

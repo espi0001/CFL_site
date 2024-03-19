@@ -1,42 +1,67 @@
 ---
+import "../styles/style.css";
 const { data } = Astro.props;
-
+const { navigation } = Astro.props;
 console.log(data);
 ---
 
 <article>
   <div class="nr1">
-    <img src={data.image} alt={data.name} />
-    <h4>{data.name}</h4>
-    <p>{data.date}</p>
-    <button>Learn more</button>
+    <img class="card-bg" src={data.image} alt={data.name} />
+    <div class="content-overlay">
+      <h4>{data.name}</h4>
+      <p>{data.date}</p>
+    </div>
+    <div class="card_bund">
+      <a href={navigation}>
+        Learn more <i class="fa-solid fa-chevron-right fa-0.5x" style="color: #ffffff;"></i>
+      </a>
+    </div>
   </div>
 </article>
 
 <style>
   article {
-    border-color: var(--text-color);
+    border: solid white 1px;
+    border-image: var(--gradient-color) 1;
   }
+
   .nr1 {
     position: relative;
   }
-  .nr1::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+
+  .card-bg {
     width: 100%;
-    height: 100%;
-    background-image: url(${data.image});
-    filter: brightness(50%);
-    z-index: -1;
-    background-repeat: no-repeat;
-    object-fit: contain;
+    aspect-ratio: 16/8;
+    object-fit: cover;
+    filter: brightness(25%);
   }
-  h4 {
-    text-align: center;
+
+  .content-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
   }
-  p {
-    text-align: center;
+
+  .card_bund a {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 12px 0;
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.55s ease;
+  }
+  .card_bund a:hover {
+    transform: scale(1.1);
   }
 </style>
