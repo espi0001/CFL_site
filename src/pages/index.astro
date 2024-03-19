@@ -26,14 +26,18 @@ console.log(data);
     <p class="tagline">Discover the Magic</p>
     <h1>Copenhagen <br /> <span class="light">Light</span> Festival</h1>
     <div class="to_links">
-      <Links variant="primary">Explore</Links>
-      <Links variant="secondary" Linket="/contact">Contact<i class="fa-solid fa-chevron-right fa-0.5x" style="color: #ffffff;"></i></Links>
+      <div class="link_et">
+        <Links variant="primary">Explore</Links>
+      </div>
+      <div class="link_to">
+        <Links variant="secondary" Linket="/contact">Contact<i class="fa-solid fa-chevron-right fa-0.5x"></i></Links>
+      </div>
     </div>
     <Timer />
   </section>
 
   <section class="discover_flex">
-    <div class="50">
+    <div>
       <hr class="hr_styling" />
       <p class="tagline">Immerse yourself in a captivating display of light-based works by renowned <br />designers.</p>
       <h2>Discover the Mesmerizing <br />World of <span class="light">Light Art</span></h2>
@@ -69,104 +73,104 @@ console.log(data);
       <Newsletter info_text="Sign up to receive exclusive updates and VIP experiences." />
     </div>
   </section>
+</MainLayout>
 
-  <style>
+<style>
+  .fifty {
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .index-highlights {
+    display: flex;
+    justify-content: center;
+  }
+  .center_text {
+    text-align: center;
+  }
+
+  .cph_image {
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 60%);
+  }
+  .to_links {
+    display: flex;
+  }
+  li {
+    padding-top: 8px;
+    margin-left: 15px;
+  }
+  i {
+    margin-left: 10px;
+  }
+
+  .index-hero-spacing {
+    margin-bottom: 250px;
+  }
+  .index-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .row {
+    margin: 48px 0;
+  }
+  .content img {
+    width: 26.67px;
+    height: 21.33px;
+    margin-bottom: 12px;
+  }
+  .content {
+    margin-bottom: 40px;
+  }
+  .contact_info a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  .contact_info a:hover {
+    color: var(--action-color);
+  }
+  h5 {
+    margin-bottom: 8px;
+  }
+  iframe {
+    width: 100%;
+    height: 450px;
+  }
+
+  /* ___________________________ TABLET  ___________________________*/
+  /* reglerne gælder når skærmen er minimum 768px */
+  @media screen and (min-width: 768px) {
     .fifty {
-      width: 100%;
-      margin-inline: auto;
+      margin-inline: inherit;
     }
+  }
 
-    .index-highlights {
-      display: flex;
-      justify-content: center;
+  /* ___________________________ DESKTOP  ___________________________*/
+  @media screen and (min-width: 1024px) {
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px;
+      margin-top: 50px;
     }
-    .center_text {
-      text-align: center;
+    .discover_flex {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
     }
-
-    .cph_image {
-      mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 60%);
+    .contact_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
     }
-    .to_links {
-      display: flex;
-    }
-    li {
-      padding-top: 8px;
-      margin-left: 15px;
-    }
-    i {
-      margin-left: 10px;
-    }
-
-    .index-hero-spacing {
-      margin-bottom: 250px;
-    }
-    .index-background {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-    .row {
-      margin: 48px 0;
-    }
-    .content img {
-      width: 26.67px;
-      height: 21.33px;
-      margin-bottom: 12px;
-    }
-    .content {
-      margin-bottom: 40px;
-    }
-    .contact_info a {
-      color: var(--text-color);
-      text-decoration: none;
-    }
-    .contact_info a:hover {
-      color: var(--action-color);
-    }
-    h5 {
-      margin-bottom: 8px;
+    .fifty {
+      margin-inline: inherit;
+      align-content: center;
     }
     iframe {
-      width: 100%;
+      width: 600px;
       height: 450px;
     }
-
-    /* ___________________________ TABLET  ___________________________*/
-    /* reglerne gælder når skærmen er minimum 768px */
-    @media screen and (min-width: 768px) {
-      .fifty {
-        margin-inline: inherit;
-      }
-    }
-
-    /* ___________________________ DESKTOP  ___________________________*/
-    @media screen and (min-width: 1024px) {
-      .cards {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 32px;
-        margin-top: 50px;
-      }
-      .discover_flex {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-      }
-      .contact_grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-      }
-      .fifty {
-        margin-inline: inherit;
-        align-content: center;
-      }
-      iframe {
-        width: 600px;
-        height: 450px;
-      }
-    }
-  </style>
-</MainLayout>
+  }
+</style>
