@@ -1,6 +1,6 @@
 ---
 // const { variant } = Astro.props;
-const { info_text } = Astro.props;
+const { info_text, labelfor, imputid } = Astro.props;
 import Links from "../components/Links.astro";
 ---
 
@@ -16,7 +16,7 @@ import Links from "../components/Links.astro";
       <label for="email"><input class="subscribe_text" type="email" placeholder="Email" name="email" id="email" required /> </label>
       <button class="subscribe_knap" type="submit">Subscribe</button>
     </div>
-    <label for="terms" class="terms"><input class="terms" type="checkbox" name="termscond" id="terms" />I agree to the Terms </label>
+    <label for={labelfor} class="terms"><input class="terms" type="checkbox" name="termscond" id={imputid} />I agree to the Terms </label>
   </form>
 </div>
 

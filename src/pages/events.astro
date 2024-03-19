@@ -2,6 +2,7 @@
 import "../styles/style.css";
 import MainLayout from "../layouts/MainLayout.astro";
 import EventCard from "../components/EventCard.astro";
+import LokalMenu from "../components/LokalMenu.astro";
 
 const data = await fetch("https://sgtjiqlznfkfxjrnmbzs.supabase.co/rest/v1/CLF%20-%20team%2019?Type=eq.Event", {
   method: "GET",
@@ -24,6 +25,20 @@ const data = await fetch("https://sgtjiqlznfkfxjrnmbzs.supabase.co/rest/v1/CLF%2
       })
     }
   </section>
+  <section>
+    <article class="index-highlights">
+      <div class="center_text">
+        <hr id="center_hr" class="hr_styling" />
+        <p class="tagline">Discover</p>
+        <h2>Explore Innovative Light <span class="light">Light</span> Installations</h2>
+        <p>Discover the most innovative and significant light installations from the program.</p>
+      </div>
+    </article>
+    <div class="cards">
+      <LokalMenu navigation="/installations" image="https://copenhagenlightfestival.org/wp-content/uploads/2021/02/BIOLUMINESCENCE.jpg" tagline="Installations" header="Explore our Installations" text="Uncover the enchanting world of light art and its creators." />
+      <LokalMenu navigation="/map" image="https://copenhagenlightfestival.org/wp-content/uploads/2024/02/09.-Lanterne-Tournante-1.jpg" tagline="Map" header="Choose your Route" text="Explore the magical routes at the Festval and choose your favorite one." />
+    </div>
+  </section>
 </MainLayout>
 
 <style>
@@ -45,5 +60,24 @@ const data = await fetch("https://sgtjiqlznfkfxjrnmbzs.supabase.co/rest/v1/CLF%2
     color: transparent;
     -webkit-text-stroke-width: 1.2px;
     -webkit-text-stroke-color: var(--action-color);
+  }
+
+  .index-highlights {
+    display: flex;
+    justify-content: center;
+  }
+  .center_text {
+    text-align: center;
+  }
+  #center_hr {
+    margin-inline: auto;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+  .image {
+    height: 300px;
   }
 </style>
