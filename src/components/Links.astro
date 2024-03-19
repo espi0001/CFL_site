@@ -1,13 +1,13 @@
 ---
-const { variant } = Astro.props;
+const { variant, Linket } = Astro.props;
 ---
 
-<a class={variant}><slot /></a>
+<a href={Linket} class={variant}><slot /></a>
 
 <style>
   a {
     display: inline-block;
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 12px 36px;
     color: var(--text-color);
     border-width: 0.8px;

@@ -6,25 +6,26 @@ console.log(data);
 ---
 
 <article>
-  <div class="nr1">
-    <img class="card-bg" src={data.image} alt={data.name} />
-    <div class="content-overlay">
-      <h4>{data.name}</h4>
-      <p>{data.date}</p>
+  <a href="">
+    <div class="nr1">
+      <img class="card-bg" src={data.image} alt={data.name} />
+      <div class="content-overlay">
+        <h4>{data.name}</h4>
+        <p>{data.date}</p>
+      </div>
+      <div class="card_bund">
+        <a href={navigation}>
+          Learn more <i class="fa-solid fa-chevron-right fa-0.5x" style="color: #ffffff;"></i>
+        </a>
+      </div>
     </div>
-    <div class="card_bund">
-      <a href={navigation}>
-        Learn more <i class="fa-solid fa-chevron-right fa-0.5x" style="color: #ffffff;"></i>
-      </a>
-    </div>
-  </div>
+  </a>
 </article>
 
 <style>
   article {
     border: solid white 1px;
     border-image: var(--gradient-color) 1;
-    margin-bottom: 80px;
   }
 
   .nr1 {

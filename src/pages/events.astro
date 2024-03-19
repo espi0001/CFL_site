@@ -26,14 +26,14 @@ const data = await fetch("https://sgtjiqlznfkfxjrnmbzs.supabase.co/rest/v1/CLF%2
     }
   </section>
   <section>
-    <article class="index-highlights">
+    <div class="index-highlights">
       <div class="center_text">
         <hr id="center_hr" class="hr_styling" />
         <p class="tagline">Discover</p>
         <h2>Explore Innovative Light <span class="light">Light</span> Installations</h2>
         <p>Discover the most innovative and significant light installations from the program.</p>
       </div>
-    </article>
+    </div>
     <div class="cards">
       <LokalMenu navigation="/installations" image="https://copenhagenlightfestival.org/wp-content/uploads/2021/02/BIOLUMINESCENCE.jpg" tagline="Installations" header="Explore our Installations" text="Uncover the enchanting world of light art and its creators." />
       <LokalMenu navigation="/map" image="https://copenhagenlightfestival.org/wp-content/uploads/2024/02/09.-Lanterne-Tournante-1.jpg" tagline="Map" header="Choose your Route" text="Explore the magical routes at the Festval and choose your favorite one." />
@@ -64,17 +64,13 @@ const data = await fetch("https://sgtjiqlznfkfxjrnmbzs.supabase.co/rest/v1/CLF%2
   .index-highlights {
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
   }
   .center_text {
     text-align: center;
   }
   #center_hr {
     margin-inline: auto;
-  }
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
   }
   .image {
     height: 300px;
