@@ -5,18 +5,20 @@ console.log(data);
 ---
 
 <article>
-  <div class="nr1">
-    <img class="card-bg" src={data.image} alt={data.name} />
-    <div class="content-overlay">
-      <h4>{data.name}</h4>
-      <p>{data.date}</p>
+  <a href="">
+    <div class="nr1">
+      <img class="card-bg" src={data.image} alt={data.name} />
+      <div class="content-overlay">
+        <h4>{data.name}</h4>
+        <p>{data.date}</p>
+      </div>
+      <div class="card_bund">
+        <a href={navigation}>
+          Learn more <i class="fa-solid fa-chevron-right fa-0.5x" style="color: #ffffff;"></i>
+        </a>
+      </div>
     </div>
-    <div class="card_bund">
-      <a href={navigation}>
-        Learn more <i class="fa-solid fa-chevron-right fa-0.5x" style="color: #ffffff;"></i>
-      </a>
-    </div>
-  </div>
+  </a>
 </article>
 
 <style>
@@ -33,6 +35,10 @@ console.log(data);
     aspect-ratio: 16/8;
     object-fit: cover;
     filter: brightness(25%);
+  }
+
+  .nr1 img:hover {
+    filter: none;
   }
 
   .content-overlay {
