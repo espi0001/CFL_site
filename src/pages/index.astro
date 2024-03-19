@@ -4,6 +4,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Links from "../components/Links.astro";
 import Timer from "../components/Timer.astro";
 import Newsletter from "../components/Newsletter.astro";
+import LokalMenupt2 from "../components/LokalMenupt2.astro";
 import LokalMenu from "../components/LokalMenu.astro";
 
 const data = await fetch("https://sgtjiqlznfkfxjrnmbzs.supabase.co/rest/v1/CLF - team 19", {
@@ -49,14 +50,7 @@ console.log(data);
     </div>
   </section>
   <section>
-    <article class="index-highlights">
-      <div class="center_text">
-        <hr id="center_hr" class="hr_styling" />
-        <p class="tagline">Highlights</p>
-        <h2>Explore the <span class="light">Light</span> Program</h2>
-        <p>Discover stunning light art installations and events.</p>
-      </div>
-    </article>
+    <LokalMenupt2 tagline="Highlights" h2del1="Explore the" h2del2="Program" teksten="Discover stunning light art installations and events." />
     <div class="cards">
       <LokalMenu navigation="/events" image="https://copenhagenlightfestival.org/wp-content/uploads/2024/02/74-Unorbit-1-scaled.jpg" tagline="Events" header="Explore our Events" text="Immerse yourself in the captivating world of light art." />
       <LokalMenu navigation="/installations" image="https://copenhagenlightfestival.org/wp-content/uploads/2021/02/BIOLUMINESCENCE.jpg" tagline="Installations" header="Explore our Installations" text="Uncover the enchanting world of light art and its creators." />
@@ -122,16 +116,7 @@ console.log(data);
       width: 100%;
       margin-inline: auto;
     }
-    .index-highlights {
-      display: flex;
-      justify-content: center;
-    }
-    .center_text {
-      text-align: center;
-    }
-    #center_hr {
-      margin-inline: auto;
-    }
+
     .cph_image {
       mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 60%);
     }
