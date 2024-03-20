@@ -5,7 +5,7 @@ import Newsletter from "../components/Newsletter.astro";
 ---
 
 <article>
-  <img class="card-bg" src="https://copenhagenlightfestival.org/wp-content/uploads/2024/01/Event-Jellyfish-promo-e1706084741109.png" alt="event billede" />
+  <img class="card-bg" src="/jelly_fish_2.webp" alt="event billede" />
   <div class="content">
     <h2>Stay Updated with our Events</h2>
     <p>Subscribe to receive updates on this program item or artist.</p>
@@ -21,7 +21,6 @@ import Newsletter from "../components/Newsletter.astro";
   }
   .card-bg {
     width: 100%;
-    aspect-ratio: 1140/280;
     object-fit: cover;
     filter: brightness(50%);
     grid-column: 1/5;
@@ -33,7 +32,6 @@ import Newsletter from "../components/Newsletter.astro";
   }
 
   .content {
-    padding: 80px;
     grid-column: 2/4;
     grid-row: 2/3;
     z-index: 1;
