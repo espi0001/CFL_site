@@ -2,16 +2,14 @@
 import "../styles/style.css";
 
 import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/Hero.astro";
 import LokalMenupt2 from "../components/LokalMenupt2.astro";
 import LokalMenu from "../components/LokalMenu.astro";
 import StayUpdated from "../components/StayUpdated.astro";
 ---
 
 <MainLayout>
-  <section class="center-hero">
-    <h1>Choose Your Route to Explore our Magical Installations</h1>
-    <p>Experience the mesmerizing light installation that brings colors to life.</p>
-  </section>
+  <Hero header1="Choose Your Route to Explore our Magical " header2=" Installations" underheader1="Experience the mesmerizing light installation that brings colors to life." />
 
   <section>
     <LokalMenupt2 tagline="Discover" h2del1="Explore our Events and " h2del2="Installations" teksten="Discover the most innovative and significant light installations from the program." />
