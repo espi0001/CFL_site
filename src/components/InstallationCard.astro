@@ -29,7 +29,7 @@ const { data, navigation } = Astro.props;
           </div>
           <div class="fifty_width">
             <span class="modal-close">&times;</span>
-            <h2>Du som er i Himelen!</h2>
+            <h2>Du som er i Himlene!</h2>
             <p class="tagline">Artist: Marie Nørgaard (DK)</p>
             <h3>Location: Højbro Plads</h3>
             <h4>About:</h4>
@@ -78,7 +78,6 @@ const { data, navigation } = Astro.props;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   }
   .modal-content-padding {
-    display: flex;
     padding: 40px;
     gap: 40px;
   }
@@ -87,10 +86,6 @@ const { data, navigation } = Astro.props;
   }
   .modal.modal-hide .modal-content {
     animation: fadeOutUp 0.2s ease-in-out forwards;
-  }
-
-  .fifty_width {
-    width: 50%;
   }
 
   .fifty_width img {
@@ -161,17 +156,11 @@ const { data, navigation } = Astro.props;
   }
 
   @media (max-width: 992px) {
-    html {
-      font-size: 14px;
-    }
     .modal-content {
       width: 80%;
     }
   }
   @media (max-width: 767px) {
-    html {
-      font-size: 12px;
-    }
     .modal-content {
       padding: 2rem 1rem 1rem 1rem;
       width: 90%;
@@ -195,7 +184,7 @@ const { data, navigation } = Astro.props;
     filter: brightness(50%);
   }
 
-  .nr1 img:hover {
+  .card-bg:hover {
     filter: none;
     border: solid white 1px;
     border-image: var(--gradient-color) 1;
@@ -230,6 +219,16 @@ const { data, navigation } = Astro.props;
   }
   .card_bund button:hover {
     transform: scale(1.1);
+  }
+
+  /* ___________________________ DESKTOP  ___________________________*/
+  @media screen and (min-width: 1024px) {
+    .modal-content-padding {
+      display: flex;
+    }
+    .fifty_width {
+      width: 50%;
+    }
   }
 </style>
 
