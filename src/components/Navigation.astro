@@ -46,7 +46,7 @@ import Links from "../components/Links.astro";
   }
 
   .logo img {
-    width: 100px;
+    width: 140px;
     height: auto;
   }
 
@@ -140,7 +140,7 @@ import Links from "../components/Links.astro";
       display: block;
       background-color: var(--body-color);
       position: absolute;
-      top: 60px;
+      top: 80px;
       left: 0;
       width: 100%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -154,14 +154,15 @@ import Links from "../components/Links.astro";
     }
 
     nav.active .menu a {
-      font-size: 1rem;
+      font-size: 1.2rem;
       text-align: start;
     }
     hr {
       display: block;
+      border-image: var(--gradient-color) 1;
     }
     .logo img {
-      width: 50px;
+      width: 70px;
       height: auto;
     }
   }
@@ -171,6 +172,11 @@ import Links from "../components/Links.astro";
   @media screen and (max-width: 768px) {
     header {
       padding-inline: 20px;
+      text-align: start;
+    }
+
+    nav.active .menu a {
+      font-size: 1rem;
       text-align: start;
     }
   }
