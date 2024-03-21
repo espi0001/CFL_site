@@ -109,13 +109,8 @@ import Links from "../components/Links.astro";
     header {
       padding-inline: 40px;
     }
-  }
 
-  /* __________________________ Mobil delen __________________________ */
-  /* Reglen gælder til og med 768px */
-  @media screen and (max-width: 768px) {
     header {
-      padding-inline: 20px;
       text-align: start;
     }
     .menu {
@@ -168,6 +163,15 @@ import Links from "../components/Links.astro";
     .logo img {
       width: 50px;
       height: auto;
+    }
+  }
+
+  /* __________________________ Mobil delen __________________________ */
+  /* Reglen gælder til og med 768px */
+  @media screen and (max-width: 768px) {
+    header {
+      padding-inline: 20px;
+      text-align: start;
     }
   }
 </style>

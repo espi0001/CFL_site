@@ -123,8 +123,8 @@ a:hover {
   margin-bottom: 20px;
 }
 
-main section:not(:first-child) {
-  margin-bottom: 225px;
+main section:not(:first-child, :last-child) {
+  margin-bottom: 100px;
 }
 
 /* ___________________________ TABLET  ___________________________*/
@@ -158,5 +158,9 @@ main section:not(:first-child) {
 
   p {
     font-size: 1.125rem;
+  }
+
+  main section:not(:first-child, :last-child) {
+    margin-bottom: 180px;
   }
 }

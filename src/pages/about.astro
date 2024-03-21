@@ -12,9 +12,21 @@ import LokalMenu from "../components/LokalMenu.astro";
 </MainLayout>
 
 <style>
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+  /* ___________________________ TABLET  ___________________________*/
+  /* reglerne gælder når skærmen er minimum 768px */
+  @media screen and (min-width: 768px) {
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 50px;
+    }
+  }
+
+  /* ___________________________ DESKTOP  ___________________________*/
+  @media screen and (min-width: 1024px) {
+    .cards {
+      gap: 80px;
+    }
   }
 </style>

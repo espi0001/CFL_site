@@ -79,6 +79,7 @@ console.log(data);
   .fifty {
     width: 100%;
     margin-inline: auto;
+    margin-top: 48px;
   }
 
   .index-highlights {
@@ -144,6 +145,11 @@ console.log(data);
     .fifty {
       margin-inline: inherit;
     }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px;
+    }
   }
 
   /* ___________________________ DESKTOP  ___________________________*/
@@ -152,7 +158,6 @@ console.log(data);
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 32px;
-      margin-top: 50px;
     }
     .discover_flex {
       display: grid;
@@ -167,6 +172,7 @@ console.log(data);
     .fifty {
       margin-inline: inherit;
       align-content: center;
+      align-self: center;
     }
     iframe {
       width: 600px;
